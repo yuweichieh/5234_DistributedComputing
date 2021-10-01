@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>OrderEntryForm</title>
-	<style><%@include file="../../css/style.css"%></style>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css" />
 </head>
 <body>
 	<form:form modelAttribute="order" method="post" action="purchase/submitItems">

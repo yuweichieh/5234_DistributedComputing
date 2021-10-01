@@ -5,11 +5,11 @@
 <head>
 	<meta charset="UTF-8" name="viewport" content="with=device-width, initial-scale=1.0">
 	<title>Home Page</title>
-	<style><%@include file="../../css/style.css"%></style>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" />
 </head>
 <body>
 	<jsp:include page="Header.jsp" />
-	<h2>Add Slogan Right Here</h2>
 	<br>
 	<jsp:include page="Footer.jsp" />
 </body>

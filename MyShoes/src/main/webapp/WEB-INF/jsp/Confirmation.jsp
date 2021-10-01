@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Thank you</title>
-	<style><%@include file="../../css/style.css"%></style>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css" />
 </head>
 <body>
 	<form:form modelAttribute="confirmation" method="post" action="submitConfirmation">

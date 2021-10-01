@@ -17,7 +17,6 @@ import edu.osu.cse5234.model.ShippingInfo;
 
 @Controller
 @RequestMapping("/purchase")
-
 public class Purchase {
 	@RequestMapping(method = RequestMethod.GET)
 	public String viewOrderEntryForm(HttpServletRequest request,

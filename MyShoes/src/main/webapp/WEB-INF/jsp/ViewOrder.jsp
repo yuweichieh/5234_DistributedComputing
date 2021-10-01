@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Order Confirmation</title>
-	<style><%@include file="../../css/style.css"%></style>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css" />
 </head>
 <body>
 	<table style="width:100%; border: 1px solid black">

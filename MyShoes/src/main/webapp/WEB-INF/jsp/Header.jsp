@@ -5,16 +5,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
-	<style><%@include file="../../css/style.css"%></style>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css" />
+
 </head>
 <body>
-	<div class="header">
-		<h1>CompanyName</h1>
-		<h3>Side Slogan</h3>
-		<span><a href="/MyShoes/index">Home</a></span>
-		<span><a href="/MyShoes/purchase">View Items</a></span>
-		<span><a href="/MyShoes/aboutUs">About Us</a></span>
-		<span><a href="/MyShoes/contctUs">Contact Us</a></span>
-	</div>
+	<section class="header">
+		<nav>
+			<h1><a href="/MyShoes/index" style="text-decoration:none;">Company Name</a></h1>
+			<div class="nav-links">
+				<ul>
+					<li><a href="/MyShoes/index">Home</a></li>
+					<li><a href="/MyShoes/purchase">View Items</a></li>
+					<li><a href="/MyShoes/about">About</a></li>
+					<li><a href="/MyShoes/contact">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="text-box">
+			<h1>World's Biggest Shoes Selling Company</h1>
+			<p>You will discover all shoes that you've been looking for if you got a bunch of money in your pocket.</p>
+			<a href="/MyShoes/purchase" class="hero-btn">Buy Now</a>
+		</div>
+	</section>
 </body>
 </html>

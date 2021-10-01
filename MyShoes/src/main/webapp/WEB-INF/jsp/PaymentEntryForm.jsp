@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Payment Info</title>
-	<style><%@include file="../../css/style.css"%></style>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css" />
 </head>
 <body>
 	<form:form modelAttribute="payment" method="post" action="submitPayment">
