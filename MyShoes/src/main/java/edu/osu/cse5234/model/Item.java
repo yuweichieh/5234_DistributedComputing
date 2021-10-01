@@ -24,7 +24,7 @@ public class Item {
 	}
 
 	public String getQuantity() {
-		return quantity;
+		return (quantity == "")?"0":quantity;
 	}
 
 	public void setQuantity(String quantity) {
