@@ -5,8 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Thank you</title>
+	<meta charset="UTF-8">
+	<title>Thank you</title>
+	<style><%@include file="../../css/style.css"%></style>
 </head>
 <body>
 	<form:form modelAttribute="confirmation" method="post" action="submitConfirmation">

@@ -5,8 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Shipping Info</title>
+	<meta charset="UTF-8">
+	<title>Shipping Info</title>
+	<style><%@include file="../../css/style.css"%></style>
 </head>
 <body>
 	<form:form modelAttribute="shipping" method="post" action="submitShipping">

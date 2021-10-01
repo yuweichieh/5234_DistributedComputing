@@ -5,8 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>OrderEntryForm</title>
+	<meta charset="UTF-8">
+	<title>OrderEntryForm</title>
+	<style><%@include file="../../css/style.css"%></style>
 </head>
 <body>
 	<form:form modelAttribute="order" method="post" action="purchase/submitItems">

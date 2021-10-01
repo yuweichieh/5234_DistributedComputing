@@ -5,8 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Payment Info</title>
+	<meta charset="UTF-8">
+	<title>Payment Info</title>
+	<style><%@include file="../../css/style.css"%></style>
 </head>
 <body>
 	<form:form modelAttribute="payment" method="post" action="submitPayment">

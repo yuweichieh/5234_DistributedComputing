@@ -3,10 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style><%@include file="../../css/style.css"%></style>
 </head>
 <body>
-	<a>>Hello Spring MVC again!</a>
+
 </body>
 </html>
