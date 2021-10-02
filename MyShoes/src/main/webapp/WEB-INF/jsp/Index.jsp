@@ -6,11 +6,34 @@
 	<meta charset="UTF-8" name="viewport" content="with=device-width, initial-scale=1.0">
 	<title>Home Page</title>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" />
 </head>
 <body>
 	<jsp:include page="Header.jsp" />
-	<br>
+	<section class="location">
+		<h1 style="font-size: 25px;">Location</h1>
+		<p>Our company locations all around the world.</p>
+		<div class="row">
+			<div class="loc-col">
+				<!-- image credit to California Courts - CA.gov San Diego County, Central Courthouse  -->
+				<img src="images/cali-resized.png">
+				<div class="layer">
+					<h3>San Diego, CA</h3>
+				</div>
+			</div>
+			<div class="loc-col">
+				<img src="images/columbus-resized.png">
+				<div class="layer">
+					<h3>Columbus, OH</h3>
+				</div>
+			</div>
+			<div class="loc-col">
+				<img src="images/london-resized.png">
+				<div class="layer">
+					<h3>London, UK</h3>
+				</div>
+			</div>
+		</div>
+	</section>
 	<jsp:include page="Footer.jsp" />
 </body>
 </html>

@@ -16,12 +16,12 @@ public class Index {
 	}
 	
 	@RequestMapping(path="/about", method=RequestMethod.GET)
-	public String about(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		return "about";
+	public String about(HttpServletRequest request, HttpServletResponse response) {
+		return "About";
 	}
 
 	@RequestMapping(path="/contact", method=RequestMethod.GET)
-	public String contact(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		return "contact";
+	public String contact(HttpServletRequest request, HttpServletResponse response) {
+		return "Contact";
 	}
 }

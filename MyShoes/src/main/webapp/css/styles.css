@@ -8,12 +8,10 @@
 .header{
 	min-height: 100vh;
 	width: 100%;
-	background-image: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6)), url("images/homeBack.png");
 	background-position: center;
 	background-size: cover;
 	position: relative;
 }
-
 
 nav{
 	display: flex;
@@ -42,7 +40,7 @@ nav img{
 .nav-links ul li a{
 	color: #fff; /* white */
 	text-decoration: none;
-	font-size: 13px;
+	font-size: 15px;
 }
 
 .nav-links ul li::after{
@@ -97,6 +95,10 @@ nav img{
 	transition: 1s;
 }
 
+nav .fa{
+	display: none;
+}
+
 @media(max-width: 700px){
 	.text-box h1{
 		font-size: 16px;
@@ -110,12 +112,101 @@ nav img{
 		height: 100vh;
 		width: 200px;
 		top: 0;
-		right: 0;
+		right: -200px;
 		text-align: left;
 		z-index: 2;
+		transition: 1s;
+	}
+	nav .fa{
+		display: block;
+		color: #fff;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+	.nav-links ul{
+		padding: 30px;
 	}
 }
 
+/* Location section's css */
+.location{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 25px;
+}
+
+.row{
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.loc-col{
+	flex-basis: 31%;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+}
+
+.loc-col img{
+	width: 100%;
+	display: block;
+}
+
+.layer{
+	background: transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+
+.layer h3{
+	width: 100%;
+	font-weight: 500;
+	color: white;
+	font-size: 26px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s
+}
+
+.layer:hover h3{
+	bottom: 49%;
+	opacity: 1;
+}
+
+.layer:hover{
+	background: rgba(0,0,0,0.5);
+}
+
+@media(max-width: 700px){
+	.row{
+		flex-direction: column;
+	}
+}
+
+/* css for AboutUs part */
+
+.container{
+	display: flex;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	color: #fff;
+	position: absolute;
+	text-align: center;
+}
 
 
 
