@@ -15,8 +15,8 @@
 			<ul>
 				<li><a href="/MyShoes/index">Home</a></li>
 				<li><a href="/MyShoes/purchase">View Items</a></li>
-				<li><a href="/MyShoes/about">About</a></li>
-				<li><a href="/MyShoes/contact">Contact</a></li>
+				<li><a href="/MyShoes/index/about">About</a></li>
+				<li><a href="/MyShoes/index/contact">Contact</a></li>
 			</ul>
 		</div>
 		<i class="fa fa-bars" onclick="showMenu()"></i>
