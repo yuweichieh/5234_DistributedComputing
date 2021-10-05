@@ -5,11 +5,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" />
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css" />
 </head>
 <body>
-	<section class="header" style="background-image: linear-gradient(rgba(20,20,50,0.5), rgba(20,0,90,0.65)), url(images/homeBack.png);">
+	<section class="header" style="background-image: linear-gradient(rgba(20,20,50,0.5), rgba(20,15,80,0.65)), url(images/homeBack.png);">
 		<jsp:include page="Navbar.jsp" />
 		<div class="text-box">
 			<h1>World's Biggest Shoes Selling Company</h1>

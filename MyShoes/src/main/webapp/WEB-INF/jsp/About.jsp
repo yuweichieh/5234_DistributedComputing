@@ -8,10 +8,10 @@
 	<title>About Us</title>
 </head>
 <body>
-	<section class="header" style="background-image: linear-gradient(rgba(20,20,50,0.5), rgba(20,0,90,0.65)), url(../images/homeBack.png);">
+	<section class="header" style="background-image: linear-gradient(rgba(20,20,50,0.5), rgba(20,15,80,0.65)), url(../images/homeBack.png);">
 		<jsp:include page="Navbar.jsp" />
 		<div class="container">
-			<div class="row">
+			<div class="_row">
 				<div class="loc-col">
 					<!-- image credit to California Courts - CA.gov San Diego County, Central Courthouse  -->
 					<img src="../images/tmpPic1.image">
@@ -43,5 +43,6 @@
 			</div>
 		</div>
 	</section>
+	<jsp:include page="Footer.jsp" />
 </body>
 </html>

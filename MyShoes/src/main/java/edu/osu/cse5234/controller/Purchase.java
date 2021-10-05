@@ -83,7 +83,7 @@ public class Purchase {
 	
 	@RequestMapping(path = "/submitConfirmation", method = RequestMethod.POST)
 	public String submitConfirmation(HttpServletRequest request) {
-		return "redirect:/purchase";
+		return "redirect:/index/";
 	}
 }
 

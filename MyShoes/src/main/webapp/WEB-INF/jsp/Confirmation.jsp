@@ -10,15 +10,16 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css" />
 </head>
 <body>
-	<form:form modelAttribute="confirmation" method="post" action="submitConfirmation">
-	    <div>
-			<a>Thanks for your purchase!</a>
-			<a>Your confirmation number is ######.</a>
+	<section class="header" style="background-image: linear-gradient(rgba(20,20,50,0.5), rgba(20,15,80,0.65)), url(../images/homeBack.png);">
+		<jsp:include page="Navbar.jsp" />
+		<form:form modelAttribute="confirmation" method="post" action="submitConfirmation">
+		<div class="text-box">
+			<h1>Your confirmation number is ######.</h1>
+			<p style="font-size: 20px;">Thanks for your purchase!</p>
+			<input class="hero-btn" type="submit" value="Back to Homepage">
 		</div>
-		<div>
-			<input type="submit" value="Back to Homepage">
-		</div>
-	</form:form>
-	
+		</form:form>
+	</section>
+	<jsp:include page="Footer.jsp" />
 </body>
 </html>

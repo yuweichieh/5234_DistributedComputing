@@ -7,28 +7,38 @@
 <head>
 	<meta charset="UTF-8">
 	<title>OrderEntryForm</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css" />
 </head>
 <body>
-	<form:form modelAttribute="order" method="post" action="purchase/submitItems">
-		<table style="width:100%; border:1px solid black">
-			<tr>
-				<th>Name</th>
-				<th>Price</th>
-				<th>Quantity</th>
-			</tr>
-			<c:forEach items="${order.items}" var="item" varStatus="loop">
-				<tr>
-					<td><form:input path="items[${loop.index}].name" readonly="true"/></td>	
-					<td><form:input path="items[${loop.index}].price" readonly="true"/></td>	
-					<td><form:input path="items[${loop.index}].quantity" /></td>	
-				</tr>
-			</c:forEach>
-			
-			<tr>
-				<td colspan="2"><input type="submit" value="Purchase"></td>
-			</tr>
-		</table>
-	</form:form>
+	<section class="header" style="background-image: linear-gradient(rgba(20,20,50,0.5), rgba(20,15,80,0.65)), url(images/homeBack.png);">
+		<jsp:include page="Navbar.jsp" />
+		<form:form modelAttribute="order" method="post" action="purchase/submitItems">
+			<div class="container">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Price</th>
+							<th>Quantity</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${order.items}" var="item" varStatus="loop">
+							<tr>
+								<td><form:input id="fixInput" path="items[${loop.index}].name" readonly="true"/></td>	
+								<td><form:input id="fixInput" path="items[${loop.index}].price" readonly="true"/></td>	
+								<td><form:input path="items[${loop.index}].quantity" /></td>	
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+			<div>
+				<input class="btn btn-info" id="order-btn" type="submit" value="Purchase">
+			</div>
+		</form:form>
+	</section>
+	<jsp:include page="Footer.jsp" />
 </body>
 </html>
