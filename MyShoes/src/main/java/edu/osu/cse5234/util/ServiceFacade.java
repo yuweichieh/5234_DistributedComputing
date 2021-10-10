@@ -34,4 +34,10 @@ public class ServiceFacade {
 		client.close();
 		return availableItems;
 	}
+	
+	public void constructJSON() {
+		
+		
+	}
+	
 }
