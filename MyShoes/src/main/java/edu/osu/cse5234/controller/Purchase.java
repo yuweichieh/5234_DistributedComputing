@@ -33,6 +33,7 @@ public class Purchase {
 	@RequestMapping(path = "/submitItems", method = RequestMethod.POST)
 	public String submitItems(@ModelAttribute("order") Order order, HttpServletRequest request) {
 		request.getSession().setAttribute("order", order);
+		ServiceFacade.constructJSON(order);
 		return "redirect:/purchase/shippingEntry";
 	}
 
@@ -78,7 +79,7 @@ public class Purchase {
 	
 	@RequestMapping(path = "/submitConfirmation", method = RequestMethod.POST)
 	public String submitConfirmation(HttpServletRequest request) {
-		return "redirect:/index/";
+		return "redirect:/index";
 	}
 }
 
