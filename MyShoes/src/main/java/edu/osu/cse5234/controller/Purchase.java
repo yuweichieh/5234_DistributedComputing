@@ -14,6 +14,7 @@ import edu.osu.cse5234.model.Item;
 import edu.osu.cse5234.model.Order;
 import edu.osu.cse5234.model.PaymentInfo;
 import edu.osu.cse5234.model.ShippingInfo;
+import edu.osu.cse5234.util.ServiceFacade;
 
 @Controller
 @RequestMapping("/purchase")
@@ -21,14 +22,8 @@ public class Purchase {
 	@RequestMapping(method = RequestMethod.GET)
 	public String viewOrderEntryForm(HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
-		Item [] item = new Item[6];
-		ArrayList<Item> order_list = new ArrayList<>();
-		for(int i=0; i<5; i++) {
-			item[i] = new Item();
-			item[i].setName("Item"+String.valueOf(i));
-			item[i].setPrice(String.valueOf(11*(i+1)));
-			order_list.add(item[i]);
-		}
+		
+		List <Item> order_list = ServiceFacade.getAvailableItems();
 		Order order = new Order();
 		order.setItems(order_list);
 		request.setAttribute("order", order);
@@ -38,6 +33,7 @@ public class Purchase {
 	@RequestMapping(path = "/submitItems", method = RequestMethod.POST)
 	public String submitItems(@ModelAttribute("order") Order order, HttpServletRequest request) {
 		request.getSession().setAttribute("order", order);
+		ServiceFacade.constructJSON(order);
 		return "redirect:/purchase/shippingEntry";
 	}
 
@@ -83,7 +79,7 @@ public class Purchase {
 	
 	@RequestMapping(path = "/submitConfirmation", method = RequestMethod.POST)
 	public String submitConfirmation(HttpServletRequest request) {
-		return "redirect:/index/";
+		return "redirect:/index";
 	}
 }
 
