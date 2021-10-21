@@ -3,6 +3,9 @@
 	<name>inventory-management</name>
 	<comment></comment>
 	<projects>
+		<project>Liberty Runtime</project>
+		<project>MyShoes</project>
+		<project>order-processing</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
