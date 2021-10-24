@@ -1,6 +1,9 @@
 package edu.osu.cse5234.business.inventorymanagement;
 
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -14,18 +17,20 @@ import java.util.*;
 @Path("inventory")
 public class InventoryManagementService {
 
+	public static final String MY_QUERY= "Select i from Item i";
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Inventory GetInventory() {
 		Inventory currentInventory = new Inventory();
-		List<Item> availableItems = new ArrayList<Item>();
-		availableItems.add(new Item("001", "yeezy", "1000", "300"));
-		availableItems.add(new Item("002", "boots", "100", "250"));
-		availableItems.add(new Item("003", "slipper", "2000", "30"));
-		availableItems.add(new Item("004", "socks", "1120", "3"));
-		currentInventory.setItems(availableItems);
-		return currentInventory;
+	    EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("inventory-management");
+	    EntityManager entityManager = emfactory.createEntityManager();
+	    
+	    List<Item> availableItems = entityManager.createQuery(MY_QUERY, Item.class).getResultList();
+	    currentInventory.setItems(availableItems);
+	    entityManager.close();
+	    emfactory.close();
+	    return currentInventory;
 		
 	}
 	
