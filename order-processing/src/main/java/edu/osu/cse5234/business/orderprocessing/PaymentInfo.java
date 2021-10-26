@@ -1,7 +1,26 @@
 package edu.osu.cse5234.business.orderprocessing;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="PAYMENT_INFO")
 public class PaymentInfo {
-	String creditCardNumber, expirationDate, cvvCode, cardHolderName;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="ID")
+	private int id;
+	
+	@Column(name="CARD_NUM")
+	String creditCardNumber;
+	
+	@Column(name="EXP_DATE")
+	String expirationDate;
+	
+	@Column(name="CVV")
+	String cvvCode;
+	
+	@Column(name="HOLDER_NAME")
+	String cardHolderName;
 
 	public String getCreditCardNumber() {
 		return creditCardNumber;

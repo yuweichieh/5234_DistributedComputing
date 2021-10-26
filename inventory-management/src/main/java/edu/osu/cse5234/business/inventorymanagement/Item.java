@@ -15,7 +15,7 @@ public class Item {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="ID")
-	private String id;
+	private int id;
 	
 	@Column(name="NAME")
 	String name;
@@ -26,17 +26,17 @@ public class Item {
 	@Column(name="UNIT_PRICE")
 	String price;
 	
-	public String getId() {
-		return id;
+	public int getId() {
+		return this.id;
 	}
-	public Item(String id, String name, String availableQuantity, String price) {
+	public Item(int id, String name, String availableQuantity, String price) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.availableQuantity = availableQuantity;
 		this.price = price;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -49,7 +49,7 @@ public class Item {
 		this.name = name;
 	}
 	public String getAvailableQuantity() {
-		return availableQuantity;
+		return (availableQuantity == "")?"0":availableQuantity;
 	}
 	public void setAvailableQuantity(String availableQuantity) {
 		this.availableQuantity = availableQuantity;

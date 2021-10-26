@@ -1,7 +1,36 @@
 package edu.osu.cse5234.business.orderprocessing;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="SHIPPING_INFO")
 public class ShippingInfo {
-	String name, addressLine1, addressLine2, city, state, zip;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="ID")
+	private int id;
+
+	String name;
+	
+	@Column(name="ADDRESS1")
+	String addressLine1;
+	
+	@Column(name="ADDRESS2")
+	String addressLine2;
+	
+	@Column(name="CITY")
+	String city;
+	
+	@Column(name="STATE")
+	String state;
+	
+	@Column(name="POSTAL_CODE")
+	String zip;
 
 	public String getName() {
 		return name;

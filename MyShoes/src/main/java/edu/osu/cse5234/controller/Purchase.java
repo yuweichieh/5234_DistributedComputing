@@ -27,6 +27,10 @@ public class Purchase {
 		Order order = new Order();
 		order.setItems(order_list);
 		request.setAttribute("order", order);
+
+//		Inventory inventory = inventoryService.getAvailableInventory();
+//		request.setAttribute("inventory", inventory);
+		
 		return "OrderEntryForm";
 	}
 	

@@ -21,7 +21,7 @@ public class InventoryManagementService {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Inventory GetInventory() {
+	public Inventory getInventory() {
 		Inventory currentInventory = new Inventory();
 	    EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("inventory-management");
 	    EntityManager entityManager = emfactory.createEntityManager();
@@ -31,7 +31,6 @@ public class InventoryManagementService {
 	    entityManager.close();
 	    emfactory.close();
 	    return currentInventory;
-		
 	}
 	
 	@GET 
@@ -47,16 +46,16 @@ public class InventoryManagementService {
 		List<Item> availableItems = new ArrayList<Item>();
 		
 		if (id.equals(s1)) {
-			availableItems.add(new Item("001", "yeezy", "1000", "300"));
+			availableItems.add(new Item(1, "yeezy", "1000", "300"));
 		}
-		else if ( id.equals(s2)) {
-			availableItems.add(new Item("002", "boots", "100", "250"));
+		else if (id.equals(s2)) {
+			availableItems.add(new Item(2, "boots", "100", "250"));
 		}
-		else if ( id.equals(s3)) {
-			availableItems.add(new Item("003", "slipper", "2000", "30"));
+		else if (id.equals(s3)) {
+			availableItems.add(new Item(3, "slipper", "2000", "30"));
 		}
-		else if ( id.equals(s4)) {
-			availableItems.add(new Item("004", "socks", "1120", "3"));
+		else if (id.equals(s4)) {
+			availableItems.add(new Item(4, "socks", "1120", "3"));
 		}
 		currentInventory.setItems(availableItems);
 		return currentInventory;
@@ -76,16 +75,16 @@ public class InventoryManagementService {
 		
 		
 		if (name.equals(s1)) {
-			availableItems.add(new Item("001", "yeezy", "1000", "300"));
+			availableItems.add(new Item(1, "yeezy", "1000", "300"));
 		}
-		else if ( name.equals(s2)) {
-			availableItems.add(new Item("002", "boots", "100", "250"));
+		else if (name.equals(s2)) {
+			availableItems.add(new Item(2, "boots", "100", "250"));
 		}
-		else if ( name.equals(s3)) {
-			availableItems.add(new Item("003", "slipper", "2000", "30"));
+		else if (name.equals(s3)) {
+			availableItems.add(new Item(3, "slipper", "2000", "30"));
 		}
-		else if ( name.equals(s4)) {
-			availableItems.add(new Item("004", "socks", "1120", "3"));
+		else if (name.equals(s4)) {
+			availableItems.add(new Item(4, "socks", "1120", "3"));
 		}
 	
 		currentInventory.setItems(availableItems);
