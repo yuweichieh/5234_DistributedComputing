@@ -7,7 +7,7 @@
 		<class>edu.osu.cse5234.business.orderprocessing.ShippingInfo</class>
 		<class>edu.osu.cse5234.business.orderprocessing.PaymentInfo</class>
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:h2:/Users/yuwc/Desktop/OSU/course/2_AU21/5234_DistributeComputing/workspace/5234_DistributedComputing/h2/MyShoesInventoryDB;AUTO_SERVER=TRUE"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:h2:/Users/brosheng/5234_DistributedComputing/h2/MyShoesInventoryDB;AUTO_SERVER=TRUE"/>
 			<property name="javax.persistence.jdbc.user" value="sa"/>
 			<property name="javax.persistence.jdbc.password" value=""/>
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
