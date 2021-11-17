@@ -1283,3 +1283,6 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/yuwc/
 	at org.h2.mvstore.FileStore.open(FileStore.java:172)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
 	... 86 more
+2021-11-16 23:51:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CUSTOMER_ORDER CUSTOMER_ORDER_LINE_ITEM ITEM[*] SHIPPING_INFO"; SQL statement:
+SELECT * FROM CUSTOMER_ORDER CUSTOMER_ORDER_LINE_ITEM ITEM SHIPPING_INFO [42000-200]
