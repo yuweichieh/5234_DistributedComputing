@@ -43,9 +43,10 @@ public class Order {
 	}
 
 	public int getTotal_price() {
-		int total_price = 0;
-		for(int i=0; i<this.items.size(); i++) 
-			total_price += Integer.valueOf(this.items.get(i).getPrice()) * Integer.valueOf(this.items.get(i).getAvailableQuantity());
-		return total_price;
+//		int total_price = 0;
+//		for(int i=0; i<this.items.size(); i++) 
+//			total_price += Integer.valueOf(this.items.get(i).getPrice()) * Integer.valueOf(this.items.get(i).getAvailableQuantity());
+//		return total_price;
+		return 1;
 	}
 }
