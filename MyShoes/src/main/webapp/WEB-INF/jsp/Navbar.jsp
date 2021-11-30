@@ -9,7 +9,7 @@
 </head>
 <body>
 	<nav>
-		<h1><a href="/MyShoes/index" style="text-decoration:none; font-size: 30px;">Company Logo Here</a></h1>
+		<h1><img href="/MyShoes/index" src="${pageContext.request.contextPath}/images/logo_nobg.png"></img></h1>
 		<div class="nav-links" id="navLinks">
 			<i class="fa fa-times" onclick="hideMenu()"></i>
 			<ul>

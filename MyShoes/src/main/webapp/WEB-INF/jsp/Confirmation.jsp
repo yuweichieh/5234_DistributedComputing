@@ -14,7 +14,7 @@
 		<jsp:include page="Navbar.jsp" />
 		<form:form modelAttribute="confirmation" method="post" action="submitConfirmation">
 		<div class="text-box">
-			<h1>Your confirmation number is ######.</h1>
+			<h1>Your confirmation number is #310001.</h1>
 			<p style="font-size: 20px;">Thanks for your purchase!</p>
 			<input class="hero-btn" type="submit" value="Back to Homepage">
 		</div>

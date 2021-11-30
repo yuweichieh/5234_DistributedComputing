@@ -47,6 +47,6 @@ public class Order {
 //		for(int i=0; i<this.items.size(); i++) 
 //			total_price += Integer.valueOf(this.items.get(i).getPrice()) * Integer.valueOf(this.items.get(i).getAvailableQuantity());
 //		return total_price;
-		return 1;
+		return 100;
 	}
 }
