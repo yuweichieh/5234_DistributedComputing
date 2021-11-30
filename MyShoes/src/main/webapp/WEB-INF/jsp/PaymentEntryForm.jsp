@@ -27,10 +27,10 @@
 				    	<tr><td>Total Amount to Pay: </td><td style="color: red;"><c:out value ="${order.getTotal_price()}"/></td></tr>
 			    	</tbody>
 	    		</table>
+				<div>
+					<input class="btn btn-info" id="order-btn" type="submit" value="Confirm">
+				</div>
 	    	</div>
-			<div>
-				<input class="btn btn-info" id="order-btn" type="submit" value="Confirm">
-			</div>
 		</form:form>
 	</section>
 	<jsp:include page="Footer.jsp" />

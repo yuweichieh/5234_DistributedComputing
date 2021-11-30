@@ -33,9 +33,9 @@
 						</c:forEach>
 					</tbody>
 				</table>
-			</div>
-			<div>
-				<input class="btn btn-info" id="order-btn" type="submit" value="Purchase">
+				<div>
+					<input class="btn btn-info" id="order-btn" type="submit" value="Purchase">
+				</div>
 			</div>
 		</form:form>
 	</section>

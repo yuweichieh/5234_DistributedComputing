@@ -28,10 +28,10 @@
 				    	<tr><td>Zip: </td><td><form:input path="zip" /></td></tr>
 			    	</tbody>
 	    		</table>
+				<div>
+					<input class="btn btn-info" id="order-btn" type="submit" value="Confirm">
+				</div>
 	    	</div>
-			<div>
-				<input class="btn btn-info" id="order-btn" type="submit" value="Confirm">
-			</div>
 		</form:form>
 	</section>
 	<jsp:include page="Footer.jsp" />
